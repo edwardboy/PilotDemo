@@ -75,7 +75,7 @@
     [self bringSubviewToFront:planeImgView];
     
     // 旋转
-    CATransform3D transform = CATransform3DMakeRotation(M_PI_4, 0, 1, 0);
+    CATransform3D transform = CATransform3DMakeRotation(M_PI/3, 0, 1, 0);
     propellerImgView.layer.transform = transform;
     
     

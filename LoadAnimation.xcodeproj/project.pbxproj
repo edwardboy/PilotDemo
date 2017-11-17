@@ -204,8 +204,8 @@
 		F23AD8CC1FBD8377004BA1F6 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				F23AD8CD1FBD8377004BA1F6 /* YYWeakProxy.m */,
 				F23AD8CE1FBD8377004BA1F6 /* YYWeakProxy.h */,
+				F23AD8CD1FBD8377004BA1F6 /* YYWeakProxy.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -555,6 +555,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZ29ULHSK9;
 				INFOPLIST_FILE = LoadAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edg.LoadAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -569,6 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WZ29ULHSK9;
 				INFOPLIST_FILE = LoadAnimation/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edg.LoadAnimation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
