@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RockerView">
+            <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="9SI-Ss-RIb">
+                    <rect key="frame" x="0.0" y="0.0" width="198" height="198"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="15" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="f" translatesAutoresizingMaskIntoConstraints="NO" id="JMa-OD-2Tu">
+                    <rect key="frame" x="8" y="110" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="13" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="d" translatesAutoresizingMaskIntoConstraints="NO" id="K1Z-WL-PtC">
+                    <rect key="frame" x="111" y="110" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="11" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="b" translatesAutoresizingMaskIntoConstraints="NO" id="Hp7-YN-klN">
+                    <rect key="frame" x="110" y="8" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="12" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c" translatesAutoresizingMaskIntoConstraints="NO" id="32e-Ub-evl">
+                    <rect key="frame" x="127" y="61" width="71" height="76"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="14" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="e" translatesAutoresizingMaskIntoConstraints="NO" id="uAC-Ow-dlq">
+                    <rect key="frame" x="61" y="127" width="76" height="71"/>
+                    <color key="tintColor" red="0.21278946430000001" green="1" blue="0.090086706969999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="10" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="a" translatesAutoresizingMaskIntoConstraints="NO" id="bYx-kJ-l7L">
+                    <rect key="frame" x="60" y="1" width="76" height="71"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="16" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="g" translatesAutoresizingMaskIntoConstraints="NO" id="Gpx-Rx-BrT">
+                    <rect key="frame" x="1" y="61.5" width="70" height="75"/>
+                </imageView>
+                <imageView hidden="YES" userInteractionEnabled="NO" tag="17" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="h" translatesAutoresizingMaskIntoConstraints="NO" id="e4O-wr-TmY">
+                    <rect key="frame" x="9" y="8" width="76" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="center" translatesAutoresizingMaskIntoConstraints="NO" id="nDJ-F4-D1j">
+                    <rect key="frame" x="57" y="57" width="84" height="84"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nDJ-F4-D1j" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="89p-R3-pM1"/>
+                <constraint firstItem="nDJ-F4-D1j" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="8Og-gx-qq9"/>
+                <constraint firstAttribute="trailing" secondItem="9SI-Ss-RIb" secondAttribute="trailing" id="Bj9-as-mQY"/>
+                <constraint firstItem="Gpx-Rx-BrT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="Dab-oE-2fu"/>
+                <constraint firstItem="bYx-kJ-l7L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="F2M-yA-DDu"/>
+                <constraint firstItem="9SI-Ss-RIb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Q5H-iP-8vc"/>
+                <constraint firstItem="Gpx-Rx-BrT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Yd1-hw-a7p"/>
+                <constraint firstItem="32e-Ub-evl" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="aQF-xJ-KNv"/>
+                <constraint firstItem="uAC-Ow-dlq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ece-HQ-Yjw"/>
+                <constraint firstAttribute="trailing" secondItem="32e-Ub-evl" secondAttribute="trailing" id="g6T-4o-cXU"/>
+                <constraint firstAttribute="bottom" secondItem="9SI-Ss-RIb" secondAttribute="bottom" id="gbc-zg-aRd"/>
+                <constraint firstItem="bYx-kJ-l7L" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-1" id="qtx-zY-Uw9"/>
+                <constraint firstItem="9SI-Ss-RIb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="we3-km-N7N"/>
+                <constraint firstAttribute="bottom" secondItem="uAC-Ow-dlq" secondAttribute="bottom" id="zEc-Wm-vfR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgImgView" destination="9SI-Ss-RIb" id="eNc-pv-Map"/>
+                <outlet property="centerImgView" destination="nDJ-F4-D1j" id="WfK-vY-1pS"/>
+                <outletCollection property="arrowImgViews" destination="bYx-kJ-l7L" id="qUK-TF-tTR"/>
+                <outletCollection property="arrowImgViews" destination="Hp7-YN-klN" id="1rM-hk-cOp"/>
+                <outletCollection property="arrowImgViews" destination="32e-Ub-evl" id="JNw-uX-bv7"/>
+                <outletCollection property="arrowImgViews" destination="K1Z-WL-PtC" id="0hd-Il-amd"/>
+                <outletCollection property="arrowImgViews" destination="uAC-Ow-dlq" id="jL5-Gr-pLg"/>
+                <outletCollection property="arrowImgViews" destination="JMa-OD-2Tu" id="zgW-fW-M2W"/>
+                <outletCollection property="arrowImgViews" destination="Gpx-Rx-BrT" id="2KG-is-ojP"/>
+                <outletCollection property="arrowImgViews" destination="e4O-wr-TmY" id="4nu-1I-7bH"/>
+            </connections>
+            <point key="canvasLocation" x="-266" y="-248"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="a" width="76" height="71"/>
+        <image name="b" width="80" height="80"/>
+        <image name="bg" width="198" height="198"/>
+        <image name="c" width="71" height="76"/>
+        <image name="center" width="84" height="84"/>
+        <image name="d" width="80" height="80"/>
+        <image name="e" width="76" height="71"/>
+        <image name="f" width="80" height="80"/>
+        <image name="g" width="70" height="75"/>
+        <image name="h" width="79" height="80"/>
+    </resources>
+</document>

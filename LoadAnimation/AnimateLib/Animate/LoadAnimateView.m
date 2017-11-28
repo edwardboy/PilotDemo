@@ -8,7 +8,6 @@
 
 #import "LoadAnimateView.h"
 #import "YYWeakProxy.h"
-#import "Masonry.h"
 
 @interface LoadAnimateView()<CAAnimationDelegate>
 {
@@ -24,8 +23,6 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        
-//        NSLog(@"%s",__func__);
         [self setupView];
     }
     return self;
@@ -33,12 +30,10 @@
 
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
-//        NSLog(@"%s",__func__);
         [self setupView];
     }
     return self;
 }
-
 
 /**
  初始化界面
@@ -78,7 +73,6 @@
     CATransform3D transform = CATransform3DMakeRotation(M_PI/3, 0, 1, 0);
     propellerImgView.layer.transform = transform;
     
-    
     _timer = [NSTimer timerWithTimeInterval:1/60 target:[YYWeakProxy proxyWithTarget:self] selector:@selector(fastAnimate) userInfo:nil repeats:YES];
     _planeTimer = [NSTimer timerWithTimeInterval:1 target:[YYWeakProxy proxyWithTarget:self] selector:@selector(slowAnimate) userInfo:nil repeats:YES];
     
@@ -91,9 +85,8 @@
 - (void)fastAnimate{
     //  螺旋桨旋转
     [UIView animateWithDuration:1/60 animations:^{
-        _propellerImgView.layer.transform = CATransform3DRotate(_propellerImgView.layer.transform, M_PI/180 , 0, 0, 1);
+        _propellerImgView.layer.transform = CATransform3DRotate(_propellerImgView.layer.transform, -M_PI/180 , 0, 0, 1);
     }];
-    
 }
 
 /**
@@ -140,7 +133,6 @@
     
     [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
     [[NSRunLoop currentRunLoop] addTimer:_planeTimer forMode:NSRunLoopCommonModes];
-    
 }
 
 - (void)setFrameAnimationWithView:(UIView *)view{
@@ -160,11 +152,7 @@
     [view.layer addAnimation:frameAnimation forKey:@"animation"];
 }
 
-- (void)layoutSubviews{
-    
-}
-
-- (void)animationDidStart:(CAAnimation *)anim;{
+- (void)animationDidStart:(CAAnimation *)anim{
     NSLog(@"%s",__func__);
 }
 
@@ -173,8 +161,8 @@
  * is true if the animation reached the end of its active duration
  * without being removed. */
 
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag;{
-    NSLog(@"%s",__func__);
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
+    NSLog(@"%s---flag:%d",__func__,flag);
 }
 
 /**

@@ -27,6 +27,8 @@
 		F23AD8F11FBD8AB3004BA1F6 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD8E61FBD8AB3004BA1F6 /* MASConstraint.m */; };
 		F23AD8F21FBD8AB3004BA1F6 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD8E81FBD8AB3004BA1F6 /* MASViewConstraint.m */; };
 		F23AD8F31FBD8AB3004BA1F6 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD8E91FBD8AB3004BA1F6 /* MASViewAttribute.m */; };
+		F25319521FCCFA830094CFBA /* RockerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F25319511FCCFA830094CFBA /* RockerView.m */; };
+		F25319541FCD30710094CFBA /* RockerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F25319531FCD30710094CFBA /* RockerView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,9 @@
 		F23AD8E71FBD8AB3004BA1F6 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		F23AD8E81FBD8AB3004BA1F6 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
 		F23AD8E91FBD8AB3004BA1F6 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		F25319501FCCFA830094CFBA /* RockerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RockerView.h; sourceTree = "<group>"; };
+		F25319511FCCFA830094CFBA /* RockerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RockerView.m; sourceTree = "<group>"; };
+		F25319531FCD30710094CFBA /* RockerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RockerView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +147,7 @@
 		F23AD86C1FBD7821004BA1F6 /* LoadAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				F253194F1FCCFA650094CFBA /* Rocker */,
 				F23AD8A21FBD80F2004BA1F6 /* AnimateLib */,
 				F23AD86D1FBD7821004BA1F6 /* AppDelegate.h */,
 				F23AD86E1FBD7821004BA1F6 /* AppDelegate.m */,
@@ -240,6 +246,16 @@
 				F23AD8E91FBD8AB3004BA1F6 /* MASViewAttribute.m */,
 			);
 			path = Masonry;
+			sourceTree = "<group>";
+		};
+		F253194F1FCCFA650094CFBA /* Rocker */ = {
+			isa = PBXGroup;
+			children = (
+				F25319501FCCFA830094CFBA /* RockerView.h */,
+				F25319511FCCFA830094CFBA /* RockerView.m */,
+				F25319531FCD30710094CFBA /* RockerView.xib */,
+			);
+			path = Rocker;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,6 +364,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F25319541FCD30710094CFBA /* RockerView.xib in Resources */,
 				F23AD87A1FBD7821004BA1F6 /* LaunchScreen.storyboard in Resources */,
 				F23AD8771FBD7821004BA1F6 /* Assets.xcassets in Resources */,
 				F23AD8751FBD7821004BA1F6 /* Main.storyboard in Resources */,
@@ -383,6 +400,7 @@
 				F23AD8F31FBD8AB3004BA1F6 /* MASViewAttribute.m in Sources */,
 				F23AD8EF1FBD8AB3004BA1F6 /* NSArray+MASAdditions.m in Sources */,
 				F23AD8EC1FBD8AB3004BA1F6 /* MASCompositeConstraint.m in Sources */,
+				F25319521FCCFA830094CFBA /* RockerView.m in Sources */,
 				F23AD8ED1FBD8AB3004BA1F6 /* MASConstraintMaker.m in Sources */,
 				F23AD8F01FBD8AB3004BA1F6 /* View+MASAdditions.m in Sources */,
 				F23AD8EB1FBD8AB3004BA1F6 /* ViewController+MASAdditions.m in Sources */,
@@ -553,7 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WZ29ULHSK9;
+				DEVELOPMENT_TEAM = U548S69Z84;
 				INFOPLIST_FILE = LoadAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -568,7 +586,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WZ29ULHSK9;
+				DEVELOPMENT_TEAM = U548S69Z84;
 				INFOPLIST_FILE = LoadAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

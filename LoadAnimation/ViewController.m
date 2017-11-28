@@ -8,14 +8,23 @@
 
 #import "ViewController.h"
 #import "LoadAnimateView.h"
+#import "RockerView.h"
 
 @interface ViewController ()
 
 @property (nonatomic,strong) LoadAnimateView *animateView;
+@property (nonatomic,strong) RockerView *rockerView;
 
 @end
 
 @implementation ViewController
+
+- (RockerView *)rockerView{
+    if (!_rockerView) {
+        _rockerView = [RockerView rockerView];
+    }
+    return _rockerView;
+}
 
 - (LoadAnimateView *)animateView{
     if (!_animateView) {
@@ -30,6 +39,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [self planetAnimation];
+    
+    [self rockerViewAnimation];
+    
+}
+
+
+/**
+ 摇杆
+ */
+- (void)rockerViewAnimation{
+    [self.view addSubview:self.rockerView];
+    self.rockerView.center = self.view.center;
+}
+
+/**
+ 动画
+ */
+- (void)planetAnimation{
     //  VC中自定义控件命名为loadView时，会重复加载init方法
     LoadAnimateView *animateView = [[LoadAnimateView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
     _animateView = animateView;
