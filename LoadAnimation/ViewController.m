@@ -54,6 +54,59 @@
     self.rockerView.center = self.view.center;
 }
 
+#pragma mark - RockerViewDelegate
+- (void)rockerView:(RockerView *)rocker rockTowards:(RockTowardType)towardType{
+    NSLog(@"towardType-%ld",(long)towardType);
+    
+    switch (towardType) {
+        case RockTowardStop:{
+            NSLog(@"停止");
+        }
+            break;
+        case RockTowardUp:{
+            NSLog(@"up");
+        }
+            break;
+            
+        case RockTowardUpAndRight:{
+            NSLog(@"up and right");
+        }
+            break;
+            
+        case RockTowardRight:{
+            NSLog(@"right");
+        }
+            break;
+            
+        case RockTowardDownAndRight:{
+            NSLog(@"down and right");
+        }
+            break;
+            
+        case RockTowardDown:{
+            NSLog(@"down");
+        }
+            break;
+            
+        case RockTowardDownAndLeft:{
+            NSLog(@"down and left");
+        }
+            break;
+            
+        case RockTowardLeft:{
+            NSLog(@"left");
+        }
+            break;
+        case RockTowardUpAndLeft:{
+            NSLog(@"up and left");
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+
 /**
  动画
  */

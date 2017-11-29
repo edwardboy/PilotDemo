@@ -27,11 +27,6 @@
     [super awakeFromNib];
     
     [self bringSubviewToFront:self.centerImgView];
-    
-}
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
@@ -79,47 +74,8 @@
     selectImgView.hidden = NO;
     _selectImgView = selectImgView;
     
-    switch (selectImgView.tag) {
-        case 10:{
-            NSLog(@"up");
-        }
-            break;
-            
-        case 11:{
-            NSLog(@"up and right");
-        }
-            break;
-            
-        case 12:{
-            NSLog(@"right");
-        }
-            break;
-            
-        case 13:{
-            NSLog(@"down and right");
-        }
-            break;
-            
-        case 14:{
-            NSLog(@"down");
-        }
-            break;
-            
-        case 15:{
-            NSLog(@"down and left");
-        }
-            break;
-            
-        case 16:{
-            NSLog(@"left");
-        }
-            break;
-        case 17:{
-            NSLog(@"up and left");
-        }
-            break;
-        default:
-            break;
+    if (self.delegate && [self.delegate respondsToSelector:@selector(rockerView:rockTowards:)]) {
+        [self.delegate rockerView:self rockTowards:selectImgView.tag];
     }
 }
 
