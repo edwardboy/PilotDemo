@@ -27,39 +27,11 @@
     [super awakeFromNib];
     
     [self bringSubviewToFront:self.centerImgView];
-}
-
-- (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    CGPoint p = [touches.anyObject locationInView:self];
-    p.x-=self.bounds.size.width/2;
-    p.y-=self.bounds.size.width/2;
     
-    CGFloat s = sqrtf(p.x*p.x + p.y*p.y);
+    UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(dragCenter:)];
+    [_centerImgView addGestureRecognizer:pan];
     
-    CGFloat ts = s/(self.bounds.size.width/2);
-    if (ts>1) {
-        p.x/=ts;
-        p.y/=ts;
-    }
-    
-    p.x/=self.bounds.size.width/2;
-    p.y/=self.bounds.size.width/2;
-    
-    _centerImgView.center = CGPointMake(p.x*self.bounds.size.width/2 + self.bounds.size.width/2, p.y*self.bounds.size.width/2 + self.bounds.size.width/2);
-    
-    for (UIImageView *imgView in self.arrowImgViews) {
-        if (CGRectContainsPoint(imgView.frame, _centerImgView.center)) {
-            self.selectImgView = imgView;
-        }
-    }
-}
-
-- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self recover];
-}
-
-- (void)touchesCancelled:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self recover];
+    _centerImgView.userInteractionEnabled = YES;
 }
 
 - (void)recover{
@@ -84,42 +56,45 @@
     
     UIView *v = [self viewWithTag:14];
     v.frame = CGRectMake(61, 127, 76, 71);
-
 }
 
+- (void)dragCenter:(UIPanGestureRecognizer *)sender{
+    /*
+     拖动过程中需要注意：
+     1、中心点范围
+     2、centerImg的中心位置检测，即所处在的区域
+     */
+    if (sender.state == UIGestureRecognizerStateBegan || sender.state == UIGestureRecognizerStateChanged){
+        CGFloat circleRadius = self.bounds.size.width / 2; // 转盘半径
+        
+        CGPoint p = [sender locationInView:self];
+        p.x-=circleRadius;
+        p.y-=circleRadius;
+        
+        CGFloat s = sqrtf(p.x*p.x + p.y*p.y);
+        CGFloat ts = s/circleRadius;
+        if (ts>1) {
+            p.x/=ts;
+            p.y/=ts;
+        }
+        
+        p.x/=circleRadius;
+        p.y/=circleRadius;
+        
+        _centerImgView.center = CGPointMake(p.x*circleRadius + circleRadius, p.y*circleRadius + circleRadius);
+        for (UIImageView *imgView in self.arrowImgViews) {
+            if (CGRectContainsPoint(imgView.frame, _centerImgView.center)) {
+                self.selectImgView = imgView;
+            }
+        }
 
+    }else if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) {
+        [self recover];
+    }
+}
 
-//- (void)dragCenter:(UIPanGestureRecognizer *)sender{
-//    /*
-//     拖动过程中需要注意：
-//     1、中心点范围
-//     2、centerImg的中心位置检测，即所处在的区域
-//     */
-//
-//    if (sender.state == UIGestureRecognizerStateBegan || sender.state == UIGestureRecognizerStateChanged) {
-//
-//        UIView *center = sender.view;
-//        CGPoint translation = [sender translationInView:center.superview];
-//
-//        CGFloat radius = sqrtf(powf((center.center.x - self.bgImgView.center.x), 2) + powf((center.center.y - self.bgImgView.center.y), 2));
-//
-//        if (radius < self.bounds.size.width/2) {
-//            center.center = CGPointMake(translation.x + center.center.x, translation.y + center.center.y);
-//            [sender setTranslation:CGPointZero inView:center.superview];
-//
-//            for (UIImageView *imgView in self.arrowImgViews) {
-//                if (CGRectContainsPoint(imgView.frame, center.center)) {
-//                    self.selectImgView = imgView;
-//                }
-//            }
-//        }
-//
-//    }else if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) {
-//        [UIView animateWithDuration:0.2 animations:^{
-//            _centerImgView.center = self.bgImgView.center;
-//            self.selectImgView = nil;
-//        }];
-//    }
-//}
+- (void)dealloc{
+    NSLog(@"Rocker View dealloc");
+}
 
 @end

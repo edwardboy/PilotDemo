@@ -7,129 +7,60 @@
 //
 
 #import "ViewController.h"
-#import "LoadAnimateView.h"
-#import "RockerView.h"
 
 @interface ViewController ()
 
-@property (nonatomic,strong) LoadAnimateView *animateView;
-@property (nonatomic,strong) RockerView *rockerView;
+@property (nonatomic,strong) NSMutableArray *titles;
+@property (nonatomic,strong) NSMutableArray *classNames;
 
 @end
 
 @implementation ViewController
 
-- (RockerView *)rockerView{
-    if (!_rockerView) {
-        _rockerView = [RockerView rockerView];
-    }
-    return _rockerView;
-}
-
-- (LoadAnimateView *)animateView{
-    if (!_animateView) {
-        _animateView = [[LoadAnimateView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];;
-        UIView *view = [UIApplication sharedApplication].delegate.window;
-        [view addSubview:_animateView];
-        _animateView.center = view.center;
-    }
-    return _animateView;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [self planetAnimation];
+    self.title = @"Animation Example";
+    self.titles = @[].mutableCopy;
+    self.classNames = @[].mutableCopy;
+    [self addCell:@"Pilot" class:@"Pilot"];
+    [self addCell:@"Rocker" class:@"Rocker"];
+    [self addCell:@"Card" class:@"CardFirstVC"];
+    [self.tableView reloadData];
     
-    [self rockerViewAnimation];
     
 }
 
-
-/**
- 摇杆
- */
-- (void)rockerViewAnimation{
-    [self.view addSubview:self.rockerView];
-    self.rockerView.center = self.view.center;
+- (void)addCell:(NSString *)title class:(NSString *)className {
+    [self.titles addObject:title];
+    [self.classNames addObject:className];
 }
 
-#pragma mark - RockerViewDelegate
-- (void)rockerView:(RockerView *)rocker rockTowards:(RockTowardType)towardType{
-    NSLog(@"towardType-%ld",(long)towardType);
-    
-    switch (towardType) {
-        case RockTowardStop:{
-            NSLog(@"停止");
-        }
-            break;
-        case RockTowardUp:{
-            NSLog(@"up");
-        }
-            break;
-            
-        case RockTowardUpAndRight:{
-            NSLog(@"up and right");
-        }
-            break;
-            
-        case RockTowardRight:{
-            NSLog(@"right");
-        }
-            break;
-            
-        case RockTowardDownAndRight:{
-            NSLog(@"down and right");
-        }
-            break;
-            
-        case RockTowardDown:{
-            NSLog(@"down");
-        }
-            break;
-            
-        case RockTowardDownAndLeft:{
-            NSLog(@"down and left");
-        }
-            break;
-            
-        case RockTowardLeft:{
-            NSLog(@"left");
-        }
-            break;
-        case RockTowardUpAndLeft:{
-            NSLog(@"up and left");
-        }
-            break;
-            
-        default:
-            break;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _titles.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"YY"];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"YY"];
     }
+    cell.textLabel.text = _titles[indexPath.row];
+    return cell;
 }
 
-/**
- 动画
- */
-- (void)planetAnimation{
-    //  VC中自定义控件命名为loadView时，会重复加载init方法
-    LoadAnimateView *animateView = [[LoadAnimateView alloc]initWithFrame:CGRectMake(0, 0, 200, 200)];
-    _animateView = animateView;
-    [self.view addSubview:animateView];
-    animateView.center = self.view.center;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *className = self.classNames[indexPath.row];
+    Class class = NSClassFromString(className);
+    if (class) {
+        UIViewController *ctrl = class.new;
+        ctrl.title = _titles[indexPath.row];
+        [self.navigationController pushViewController:ctrl animated:YES];
+    }
+    [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-- (IBAction)start:(UIBarButtonItem *)sender {
-    [self.animateView startAnimate];
-}
-- (IBAction)stop:(id)sender {
-    [_animateView stopAnimate];
-    _animateView = nil;
-}
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 @end

@@ -163,6 +163,8 @@
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
     NSLog(@"%s---flag:%d",__func__,flag);
+    
+    
 }
 
 /**
@@ -179,9 +181,9 @@
 }
 
 - (void)dealloc{
-#ifdef DEBUG
+//#ifdef DEBUG
     NSLog(@"%s",__func__);
-#endif
+//#endif
 }
 
 @end

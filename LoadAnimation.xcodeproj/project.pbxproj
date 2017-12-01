@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F20B448D1FCEAE05001347F5 /* CardFirstVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B448C1FCEAE05001347F5 /* CardFirstVC.m */; };
+		F20B44901FCEAE13001347F5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B448F1FCEAE13001347F5 /* SecondViewController.m */; };
+		F20B44931FCEAF94001347F5 /* CardFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B44921FCEAF94001347F5 /* CardFlowLayout.m */; };
+		F20B44961FCEAFE8001347F5 /* CardTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B44951FCEAFE8001347F5 /* CardTransition.m */; };
+		F20B44991FCEB019001347F5 /* CardScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B44981FCEB019001347F5 /* CardScrollView.m */; };
+		F20B449C1FCEB03B001347F5 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B449B1FCEB03B001347F5 /* CardCell.m */; };
+		F20B449F1FCEB066001347F5 /* CardStarView.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B449E1FCEB066001347F5 /* CardStarView.m */; };
+		F20B44A21FCEB0CD001347F5 /* Pilot.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B44A11FCEB0CD001347F5 /* Pilot.m */; };
+		F20B44A51FCEB0EB001347F5 /* Rocker.m in Sources */ = {isa = PBXBuildFile; fileRef = F20B44A41FCEB0EB001347F5 /* Rocker.m */; };
 		F23AD86F1FBD7821004BA1F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD86E1FBD7821004BA1F6 /* AppDelegate.m */; };
 		F23AD8721FBD7821004BA1F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F23AD8711FBD7821004BA1F6 /* ViewController.m */; };
 		F23AD8751FBD7821004BA1F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F23AD8731FBD7821004BA1F6 /* Main.storyboard */; };
@@ -49,6 +58,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F20B448B1FCEAE05001347F5 /* CardFirstVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardFirstVC.h; sourceTree = "<group>"; };
+		F20B448C1FCEAE05001347F5 /* CardFirstVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardFirstVC.m; sourceTree = "<group>"; };
+		F20B448E1FCEAE13001347F5 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		F20B448F1FCEAE13001347F5 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		F20B44911FCEAF94001347F5 /* CardFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardFlowLayout.h; sourceTree = "<group>"; };
+		F20B44921FCEAF94001347F5 /* CardFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardFlowLayout.m; sourceTree = "<group>"; };
+		F20B44941FCEAFE8001347F5 /* CardTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardTransition.h; sourceTree = "<group>"; };
+		F20B44951FCEAFE8001347F5 /* CardTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardTransition.m; sourceTree = "<group>"; };
+		F20B44971FCEB019001347F5 /* CardScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardScrollView.h; sourceTree = "<group>"; };
+		F20B44981FCEB019001347F5 /* CardScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardScrollView.m; sourceTree = "<group>"; };
+		F20B449A1FCEB03B001347F5 /* CardCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		F20B449B1FCEB03B001347F5 /* CardCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		F20B449D1FCEB066001347F5 /* CardStarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardStarView.h; sourceTree = "<group>"; };
+		F20B449E1FCEB066001347F5 /* CardStarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardStarView.m; sourceTree = "<group>"; };
+		F20B44A01FCEB0CD001347F5 /* Pilot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pilot.h; sourceTree = "<group>"; };
+		F20B44A11FCEB0CD001347F5 /* Pilot.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Pilot.m; sourceTree = "<group>"; };
+		F20B44A31FCEB0EB001347F5 /* Rocker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Rocker.h; sourceTree = "<group>"; };
+		F20B44A41FCEB0EB001347F5 /* Rocker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Rocker.m; sourceTree = "<group>"; };
+		F20B44A61FCEC008001347F5 /* Animation.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animation.pch; sourceTree = "<group>"; };
 		F23AD86A1FBD7821004BA1F6 /* LoadAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoadAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F23AD86D1FBD7821004BA1F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F23AD86E1FBD7821004BA1F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -124,6 +152,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F20B44871FCEAD65001347F5 /* CardAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				F20B44881FCEADEF001347F5 /* Controller */,
+				F20B44891FCEADEF001347F5 /* Model */,
+				F20B448A1FCEADEF001347F5 /* View */,
+			);
+			path = CardAnimation;
+			sourceTree = "<group>";
+		};
+		F20B44881FCEADEF001347F5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F20B448B1FCEAE05001347F5 /* CardFirstVC.h */,
+				F20B448C1FCEAE05001347F5 /* CardFirstVC.m */,
+				F20B448E1FCEAE13001347F5 /* SecondViewController.h */,
+				F20B448F1FCEAE13001347F5 /* SecondViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F20B44891FCEADEF001347F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F20B44911FCEAF94001347F5 /* CardFlowLayout.h */,
+				F20B44921FCEAF94001347F5 /* CardFlowLayout.m */,
+				F20B44941FCEAFE8001347F5 /* CardTransition.h */,
+				F20B44951FCEAFE8001347F5 /* CardTransition.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F20B448A1FCEADEF001347F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F20B44971FCEB019001347F5 /* CardScrollView.h */,
+				F20B44981FCEB019001347F5 /* CardScrollView.m */,
+				F20B449A1FCEB03B001347F5 /* CardCell.h */,
+				F20B449B1FCEB03B001347F5 /* CardCell.m */,
+				F20B449D1FCEB066001347F5 /* CardStarView.h */,
+				F20B449E1FCEB066001347F5 /* CardStarView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		F23AD8611FBD7821004BA1F6 = {
 			isa = PBXGroup;
 			children = (
@@ -147,12 +220,14 @@
 		F23AD86C1FBD7821004BA1F6 /* LoadAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				F20B44871FCEAD65001347F5 /* CardAnimation */,
 				F253194F1FCCFA650094CFBA /* Rocker */,
 				F23AD8A21FBD80F2004BA1F6 /* AnimateLib */,
 				F23AD86D1FBD7821004BA1F6 /* AppDelegate.h */,
 				F23AD86E1FBD7821004BA1F6 /* AppDelegate.m */,
 				F23AD8701FBD7821004BA1F6 /* ViewController.h */,
 				F23AD8711FBD7821004BA1F6 /* ViewController.m */,
+				F20B44A61FCEC008001347F5 /* Animation.pch */,
 				F23AD8731FBD7821004BA1F6 /* Main.storyboard */,
 				F23AD8761FBD7821004BA1F6 /* Assets.xcassets */,
 				F23AD8781FBD7821004BA1F6 /* LaunchScreen.storyboard */,
@@ -186,6 +261,8 @@
 				F23AD8CC1FBD8377004BA1F6 /* Tool */,
 				F23AD8A31FBD80F2004BA1F6 /* Animate */,
 				F23AD8A61FBD80F2004BA1F6 /* Vender */,
+				F20B44A01FCEB0CD001347F5 /* Pilot.h */,
+				F20B44A11FCEB0CD001347F5 /* Pilot.m */,
 			);
 			path = AnimateLib;
 			sourceTree = "<group>";
@@ -254,6 +331,8 @@
 				F25319501FCCFA830094CFBA /* RockerView.h */,
 				F25319511FCCFA830094CFBA /* RockerView.m */,
 				F25319531FCD30710094CFBA /* RockerView.xib */,
+				F20B44A31FCEB0EB001347F5 /* Rocker.h */,
+				F20B44A41FCEB0EB001347F5 /* Rocker.m */,
 			);
 			path = Rocker;
 			sourceTree = "<group>";
@@ -392,21 +471,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F20B44901FCEAE13001347F5 /* SecondViewController.m in Sources */,
+				F20B44931FCEAF94001347F5 /* CardFlowLayout.m in Sources */,
 				F23AD8721FBD7821004BA1F6 /* ViewController.m in Sources */,
 				F23AD87D1FBD7821004BA1F6 /* main.m in Sources */,
+				F20B44A51FCEB0EB001347F5 /* Rocker.m in Sources */,
 				F23AD8EE1FBD8AB3004BA1F6 /* MASLayoutConstraint.m in Sources */,
 				F23AD8C11FBD80F2004BA1F6 /* LoadAnimateView.m in Sources */,
 				F23AD86F1FBD7821004BA1F6 /* AppDelegate.m in Sources */,
 				F23AD8F31FBD8AB3004BA1F6 /* MASViewAttribute.m in Sources */,
 				F23AD8EF1FBD8AB3004BA1F6 /* NSArray+MASAdditions.m in Sources */,
+				F20B449C1FCEB03B001347F5 /* CardCell.m in Sources */,
 				F23AD8EC1FBD8AB3004BA1F6 /* MASCompositeConstraint.m in Sources */,
 				F25319521FCCFA830094CFBA /* RockerView.m in Sources */,
 				F23AD8ED1FBD8AB3004BA1F6 /* MASConstraintMaker.m in Sources */,
+				F20B44961FCEAFE8001347F5 /* CardTransition.m in Sources */,
 				F23AD8F01FBD8AB3004BA1F6 /* View+MASAdditions.m in Sources */,
 				F23AD8EB1FBD8AB3004BA1F6 /* ViewController+MASAdditions.m in Sources */,
+				F20B448D1FCEAE05001347F5 /* CardFirstVC.m in Sources */,
 				F23AD8CF1FBD8377004BA1F6 /* YYWeakProxy.m in Sources */,
+				F20B44A21FCEB0CD001347F5 /* Pilot.m in Sources */,
+				F20B449F1FCEB066001347F5 /* CardStarView.m in Sources */,
 				F23AD8F21FBD8AB3004BA1F6 /* MASViewConstraint.m in Sources */,
 				F23AD8EA1FBD8AB3004BA1F6 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				F20B44991FCEB019001347F5 /* CardScrollView.m in Sources */,
 				F23AD8F11FBD8AB3004BA1F6 /* MASConstraint.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +660,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U548S69Z84;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LoadAnimation/Animation.pch";
 				INFOPLIST_FILE = LoadAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -587,6 +676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U548S69Z84;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LoadAnimation/Animation.pch";
 				INFOPLIST_FILE = LoadAnimation/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
