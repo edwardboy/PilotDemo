@@ -67,7 +67,37 @@
     if (sender.state == UIGestureRecognizerStateBegan || sender.state == UIGestureRecognizerStateChanged){
         CGFloat circleRadius = self.bounds.size.width / 2; // 转盘半径
         
-        CGPoint p = [sender locationInView:self];
+        CGPoint p = [sender locationInView:self.bgImgView];   // 当前触摸点
+        
+        //  计算当前触摸点到圆心连线与X正方向形成的角度
+        CGPoint pCenter = self.bgImgView.center;    // 圆心
+        
+        float angle = atan2f(p.x - pCenter.x, p.y - pCenter.y);
+        
+        NSLog(@"angle:%.2f",180.0/ M_PI * angle);
+        
+        NSInteger tag = 0;
+        
+        if (-M_PI/8 < angle && angle <= M_PI/8){    // e
+            tag = 14;
+        }else if (M_PI/8 < angle && angle <= M_PI*3/8){ //d
+            tag = 13;
+        }else if (M_PI*3/8 < angle && angle <= M_PI*5/8){   // c
+            tag = 12;
+        }else if (M_PI*5/8 < angle && angle <= M_PI*7/8){   // b
+            tag = 11;
+        }else if (-M_PI*3/8 < angle && angle <= -M_PI/8){   // f
+            tag = 15;
+        }else if (-M_PI*5/8 < angle && angle <= -M_PI*3/8){   // g
+            tag = 16;
+        }else if (-M_PI*7/8 < angle && angle <= -M_PI*5/8){   // h
+            tag = 17;
+        }else { // a
+            tag = 10;
+        }
+        self.selectImgView = [self viewWithTag:tag];
+        
+        
         p.x-=circleRadius;
         p.y-=circleRadius;
         
@@ -82,11 +112,11 @@
         p.y/=circleRadius;
         
         _centerImgView.center = CGPointMake(p.x*circleRadius + circleRadius, p.y*circleRadius + circleRadius);
-        for (UIImageView *imgView in self.arrowImgViews) {
-            if (CGRectContainsPoint(imgView.frame, _centerImgView.center)) {
-                self.selectImgView = imgView;
-            }
-        }
+//        for (UIImageView *imgView in self.arrowImgViews) {
+//            if (CGRectContainsPoint(imgView.frame, _centerImgView.center)) {
+//                self.selectImgView = imgView;
+//            }
+//        }
 
     }else if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) {
         [self recover];
