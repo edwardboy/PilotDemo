@@ -66,14 +66,11 @@
      */
     if (sender.state == UIGestureRecognizerStateBegan || sender.state == UIGestureRecognizerStateChanged){
         CGFloat circleRadius = self.bounds.size.width / 2; // 转盘半径
-        
         CGPoint p = [sender locationInView:self.bgImgView];   // 当前触摸点
         
         //  计算当前触摸点到圆心连线与X正方向形成的角度
         CGPoint pCenter = self.bgImgView.center;    // 圆心
-        
         float angle = atan2f(p.x - pCenter.x, p.y - pCenter.y);
-        
         NSLog(@"angle:%.2f",180.0/ M_PI * angle);
         
         NSInteger tag = 0;
@@ -97,21 +94,19 @@
         }
         self.selectImgView = [self viewWithTag:tag];
         
+        // 当触摸点处在圆内、圆上，滑块跟随触摸点；当触摸点在圆外时，则滑块在触摸点到圆心线段与圆的焦点上
         
+        NSLog(@"p.x:%.1f",p.x);
         p.x-=circleRadius;
         p.y-=circleRadius;
-        
+        NSLog(@"1--p.x:%.1f",p.x);
         CGFloat s = sqrtf(p.x*p.x + p.y*p.y);
         CGFloat ts = s/circleRadius;
         if (ts>1) {
             p.x/=ts;
             p.y/=ts;
         }
-        
-        p.x/=circleRadius;
-        p.y/=circleRadius;
-        
-        _centerImgView.center = CGPointMake(p.x*circleRadius + circleRadius, p.y*circleRadius + circleRadius);
+        _centerImgView.center = CGPointMake(p.x + circleRadius, p.y + circleRadius);
 
     }else if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) {
         [self recover];
