@@ -112,11 +112,6 @@
         p.y/=circleRadius;
         
         _centerImgView.center = CGPointMake(p.x*circleRadius + circleRadius, p.y*circleRadius + circleRadius);
-//        for (UIImageView *imgView in self.arrowImgViews) {
-//            if (CGRectContainsPoint(imgView.frame, _centerImgView.center)) {
-//                self.selectImgView = imgView;
-//            }
-//        }
 
     }else if (sender.state == UIGestureRecognizerStateEnded || sender.state == UIGestureRecognizerStateCancelled) {
         [self recover];
